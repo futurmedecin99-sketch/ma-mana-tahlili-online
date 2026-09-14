@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ما معنى تحليلي؟ | افهم تحليلك الطبي ببساطة</title>
+    <meta name="description"
+        content="موقع عربي تثقيفي يساعدك على فهم أسماء التحاليل الطبية مثل HbA1c وTSH وCréatinine وغيرها، خصوصًا التي تظهر بأسماء فرنسية أو إنجليزية في نتائج المخابر.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://YOUR_DOMAIN/index.html">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-microscope"></i>
+                <span>ما معنى تحليلي؟</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="active">الرئيسية</a>
+                <a href="diabetes.html">تحاليل السكري</a>
+                <a href="files.html">الملفات</a>
+                <a href="about.html">من نحن</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="search-icon" aria-label="بحث"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hamburger" aria-label="القائمة"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="index.html" class="active">الرئيسية</a>
+            <a href="diabetes.html">تحاليل السكري</a>
+            <a href="files.html">الملفات</a>
+            <a href="about.html">من نحن</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">دليلك الطبي الشامل</span>
+                <h1>ما معنى <span>تحليلي؟</span></h1>
+                <p class="tagline">افهم تحليلك الطبي ببساطة</p>
+                <p class="description">ابحث عن اسم التحليل المكتوب في ورقة نتائجك، وتعرّف على معناه ولماذا يُطلب وما
+                    الذي يقيسه.</p>
+
+                <div class="search-box">
+                    <div class="search-input-wrapper">
+                        <i class="fa-solid fa-magnifying-glass search-prefix"></i>
+                        <input type="text" placeholder="اكتب اسم التحليل مثل HbA1c أو Glycémie..."
+                            aria-label="ابحث عن تحليل">
+                    </div>
+                    <button class="btn btn-primary">ابحث</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card card-1">
+                    <i class="fa-solid fa-file-medical"></i>
+                    <div>
+                        <strong>NFS</strong>
+                        <span>Numération Formule Sanguine</span>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div>
+                        <strong>HbA1c</strong>
+                        <span>السكر التراكمي</span>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="تحاليل طبية" class="hero-img-main">
+            </div>
+        </div>
+    </header>
+
+    <!-- All Analyses Section -->
+    <section class="section bg-light" id="all-tests">
+        <div class="container">
+            <div class="section-header">
+                <h2>جميع التحاليل المتاحة</h2>
+                <p>تعرف على أهم التحاليل المخبرية الشائعة وما تعنيه نتائجها.</p>
+            </div>
+
+            <div class="grid grid-3" id="all-analyses-container">
+                <!-- Cards will be generated dynamically by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How we help you Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>كيف نساعدك؟</h2>
+                <p>موقعنا مصمم ليكون جسر المعرفة بينك وبين نتائجك المخبرية.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-wrapper blue">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <h3>افهم اسم التحليل</h3>
+                    <p>شرح مبسط للمصطلحات الطبية باللغات الإنجليزية والفرنسية ورديفها بالعربية.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper green">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h3>اعرف لماذا يُطلب</h3>
+                    <p>معلومات تثقيفية عن الغرض من التحليل والأعراض التي قد تستدعي إجرائه.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper purple">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3>افهم النتيجة بشكل عام</h3>
+                    <p>شرح مبسط للمصطلحات والقيم، مع التأكيد أن التفسير الطبي الدقيق يعود لطبيبك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explanatory Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>لماذا قد ترى أسماء مختلفة لنفس التحليل؟</h2>
+                <p>قد يظهر اسم التحليل في ورقة النتائج بالعربية أو الفرنسية أو الإنجليزية، أو باستخدام اختصار طبي معقد.
+                    لذلك يساعدك موقع <strong>ما معنى تحليلي؟</strong> على التعرف على هذه المصطلحات وفهم معناها بشكل مبسط
+                    لتكون على دراية تامة بصحتك.</p>
+                <div class="cta-badges">
+                    <span><i class="fa-solid fa-check"></i> عربي</span>
+                    <span><i class="fa-solid fa-check"></i> Français</span>
+                    <span><i class="fa-solid fa-check"></i> English</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">
+                        <i class="fa-solid fa-microscope"></i>
+                        <span>ما معنى تحليلي؟</span>
+                    </a>
+                    <p>موقع تثقيفي يساعدك على فهم أسماء التحاليل الطبية ومصطلحاتها بشكل مبسط.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="diabetes.html">تحاليل السكري</a></li>
+                        <li><a href="files.html">الملفات</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>معلومات قانونية</h3>
+                    <ul>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="medical-disclaimer.html">إخلاء المسؤولية الطبية</a></li>
+                        <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                        <li><a href="terms.html">شروط الاستخدام</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="disclaimer-notice">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <p>المعلومات الموجودة في الموقع تثقيفية فقط ولا تغني عن استشارة الطبيب. يرجى مراجعة طبيبك لتشخيص
+                        حالتك بدقة.</p>
+                </div>
+                <p class="copyright">&copy; 2026 ما معنى تحليلي؟. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

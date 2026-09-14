@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملفات والأدلة الطبية | ما معنى تحليلي؟</title>
+    <meta name="description" content="ملفات وأدلة مجانية مرتبطة بالتحاليل الطبية: نماذج متابعة، أدلة قراءة النتائج، وموارد تثقيفية تساعدك على فهم صحتك.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://YOUR_DOMAIN/files.html">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── File Category Filter ── */
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.25rem;
+            border: 2px solid var(--bg-gray);
+            background: var(--bg-white);
+            color: var(--text-muted);
+            border-radius: var(--radius-full);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: var(--bg-white);
+        }
+
+        /* ── File Card Extras ── */
+        .file-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.75rem;
+        }
+
+        .file-category-badge,
+        .file-type-badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.65rem;
+            border-radius: var(--radius-full);
+        }
+
+        .file-category-badge {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+        }
+
+        .file-category-badge.category-thyroid { background-color: #EDE9FE; color: #6D28D9; }
+        .file-category-badge.category-kidney  { background-color: #FEF3C7; color: #92400E; }
+        .file-category-badge.category-liver   { background-color: #D1FAE5; color: #065F46; }
+        .file-category-badge.category-lipid   { background-color: #FEE2E2; color: #991B1B; }
+        .file-category-badge.category-general { background-color: var(--bg-gray); color: var(--text-dark); }
+
+        .file-type-badge {
+            background-color: var(--bg-gray);
+            color: var(--text-muted);
+        }
+
+        .file-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        /* ── Related Analyses Links ── */
+        .file-related-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.4rem;
+            margin: 0.9rem 0;
+            font-size: 0.85rem;
+        }
+
+        .file-related-label {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .file-analysis-tag {
+            background-color: var(--secondary-light);
+            color: var(--secondary-dark);
+            padding: 0.15rem 0.6rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .file-analysis-tag:hover {
+            background-color: var(--secondary);
+            color: var(--bg-white);
+        }
+
+        .file-download-btn {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* ── Empty State ── */
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+        }
+
+        .empty-state i {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--bg-gray);
+            display: block;
+        }
+
+        .empty-state h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        /* ── Page Header Banner ── */
+        .files-hero {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #f0f9ff 100%);
+            padding: 4rem 0 3rem;
+            border-bottom: 1px solid var(--bg-gray);
+        }
+
+        .files-hero-inner {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .files-hero-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .files-count-badge {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.2rem 0.75rem;
+            border-radius: var(--radius-full);
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-microscope"></i>
+                <span>ما معنى تحليلي؟</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="diabetes.html">تحاليل السكري</a>
+                <a href="files.html" class="active">الملفات</a>
+                <a href="about.html">من نحن</a>
+            </div>
+            <div class="nav-actions">
+                <button class="search-icon" aria-label="بحث"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hamburger" aria-label="القائمة"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="index.html">الرئيسية</a>
+            <a href="diabetes.html">تحاليل السكري</a>
+            <a href="files.html" class="active">الملفات</a>
+            <a href="about.html">من نحن</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="files-hero">
+        <div class="container">
+            <div class="files-hero-inner">
+                <div class="files-hero-icon">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+                <div>
+                    <h1 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 0.4rem;">الملفات والأدلة</h1>
+                    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 0.5rem;">
+                        ملفات مجانية تساعدك على فهم تحاليلك ومتابعة صحتك.
+                    </p>
+                    <span class="files-count-badge" id="files-count-badge">جاري التحميل...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Category Filter -->
+            <div class="filter-bar" id="filter-bar">
+                <!-- Generated dynamically -->
+            </div>
+
+            <!-- Files Grid -->
+            <div class="grid grid-3" id="files-container">
+                <!-- Generated dynamically -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="empty-state" style="display: none;">
+                <i class="fa-regular fa-folder-open"></i>
+                <h3>لا توجد ملفات في هذا التصنيف حالياً</h3>
+                <p>سيتم إضافة ملفات جديدة قريباً. تفضّل بتصفّح التصنيفات الأخرى.</p>
+                <button class="btn btn-outline" style="margin-top: 1.5rem;" onclick="filterFiles('all')">
+                    عرض جميع الملفات
+                </button>
+            </div>
+
+            <!-- Back to Home -->
+            <div style="text-align: center; margin-top: 3.5rem;">
+                <a href="index.html" class="btn btn-outline">
+                    <i class="fa-solid fa-arrow-right"></i> العودة للرئيسية
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">
+                        <i class="fa-solid fa-microscope"></i>
+                        <span>ما معنى تحليلي؟</span>
+                    </a>
+                    <p>موقع تثقيفي يساعدك على فهم أسماء التحاليل الطبية ومصطلحاتها بشكل مبسط.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="diabetes.html">تحاليل السكري</a></li>
+                        <li><a href="files.html">الملفات</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>معلومات قانونية</h3>
+                    <ul>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="medical-disclaimer.html">إخلاء المسؤولية الطبية</a></li>
+                        <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                        <li><a href="terms.html">شروط الاستخدام</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="disclaimer-notice">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <p>المعلومات الموجودة في الموقع تثقيفية فقط ولا تغني عن استشارة الطبيب. يرجى مراجعة طبيبك لتشخيص حالتك بدقة.</p>
+                </div>
+                <p class="copyright">&copy; 2026 ما معنى تحليلي؟. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="files-data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filesContainer = document.getElementById('files-container');
+            const filterBar = document.getElementById('filter-bar');
+            const emptyState = document.getElementById('empty-state');
+            const countBadge = document.getElementById('files-count-badge');
+
+            let currentCategory = 'all';
+
+            // ── إنشاء أزرار التصفية
+            function buildFilterBar() {
+                const categories = typeof getUniqueFileCategories !== 'undefined'
+                    ? getUniqueFileCategories()
+                    : [];
+
+                const allBtn = document.createElement('button');
+                allBtn.className = 'filter-btn active';
+                allBtn.textContent = 'جميع الملفات';
+                allBtn.dataset.category = 'all';
+                allBtn.addEventListener('click', () => filterFiles('all'));
+                filterBar.appendChild(allBtn);
+
+                categories.forEach(cat => {
+                    const btn = document.createElement('button');
+                    btn.className = 'filter-btn';
+                    btn.textContent = cat.label;
+                    btn.dataset.category = cat.value;
+                    btn.addEventListener('click', () => filterFiles(cat.value));
+                    filterBar.appendChild(btn);
+                });
+            }
+
+            // ── تصفية وعرض الملفات
+            window.filterFiles = function(category) {
+                currentCategory = category;
+
+                // تحديث حالة الأزرار
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.category === category);
+                });
+
+                const filtered = typeof getFilesByCategory !== 'undefined'
+                    ? getFilesByCategory(category)
+                    : [];
+
+                if (filtered.length === 0) {
+                    filesContainer.innerHTML = '';
+                    emptyState.style.display = 'block';
+                } else {
+                    emptyState.style.display = 'none';
+                    filesContainer.innerHTML = filtered
+                        .map(f => typeof generateFileCardHTML !== 'undefined' ? generateFileCardHTML(f) : '')
+                        .join('');
+                }
+            };
+
+            // ── شارة عداد الملفات
+            function updateCountBadge() {
+                const total = typeof filesData !== 'undefined' ? filesData.length : 0;
+                if (total === 0) {
+                    countBadge.textContent = 'لا توجد ملفات حالياً';
+                } else {
+                    countBadge.textContent = `${total} ${total === 1 ? 'ملف متاح' : 'ملفات متاحة'}`;
+                }
+            }
+
+            // ── تهيئة الصفحة
+            buildFilterBar();
+            filterFiles('all');
+            updateCountBadge();
+        });
+    </script>
+</body>
+</html>

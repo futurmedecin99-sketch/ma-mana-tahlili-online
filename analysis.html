@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل التحليل | ما معنى تحليلي؟</title>
+    <meta name="description" content="شرح مبسط للتحليل الطبي: ماذا يقيس؟ ولماذا يُطلب؟ وماذا تعني النتيجة؟">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="" id="canonical-url">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .breadcrumb {
+            margin: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .breadcrumb a {
+            color: var(--primary);
+            font-weight: 500;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .analysis-header {
+            margin-bottom: 3rem;
+            text-align: right;
+            background-color: var(--primary-light);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+        }
+        .analysis-title {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        .analysis-subtitle {
+            font-size: 1.25rem;
+            color: var(--secondary-dark);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .names-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            background-color: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+        .name-box {
+            display: flex;
+            flex-direction: column;
+        }
+        .name-box .label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+        .name-box .value {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        
+        .analysis-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: var(--bg-white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--bg-gray);
+        }
+        .analysis-section h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .analysis-section p {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .alert-box {
+            background-color: rgba(245, 158, 11, 0.1);
+            border-right: 4px solid var(--warning);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 3rem;
+        }
+        .alert-box h3 {
+            color: var(--warning);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .back-btn-container {
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        /* 404 styles */
+        .not-found-container {
+            text-align: center;
+            padding: 5rem 0;
+            display: none;
+        }
+        .not-found-container h1 {
+            font-size: 3rem;
+            color: var(--danger);
+            margin-bottom: 1rem;
+        }
+        .content-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-microscope"></i><span>ما معنى تحليلي؟</span></a>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="diabetes.html">تحاليل السكري</a>
+                <a href="files.html">الملفات</a>
+                <a href="about.html">من نحن</a>
+            </div>
+            <div class="nav-actions">
+                <button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">الرئيسية</a>
+            <a href="diabetes.html">تحاليل السكري</a>
+            <a href="files.html">الملفات</a>
+            <a href="about.html">من نحن</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- 404 Container -->
+        <div class="not-found-container" id="not-found">
+            <i class="fa-solid fa-triangle-exclamation" style="font-size: 4rem; color: var(--danger); margin-bottom: 1.5rem;"></i>
+            <h1>عذرًا، لم نتمكن من العثور على هذا التحليل.</h1>
+            <p style="margin-bottom: 2rem; color: var(--text-muted); font-size: 1.2rem;">تأكد من الرابط الصحيح أو عُد للبحث في قائمة التحاليل المتاحة.</p>
+            <a href="index.html" class="btn btn-primary">العودة إلى التحاليل</a>
+        </div>
+
+        <!-- Content Container -->
+        <div class="content-container" id="analysis-content">
+            <div class="breadcrumb">
+                <a href="index.html">الرئيسية</a> &gt; <span id="bc-name"></span>
+            </div>
+
+            <div class="analysis-header">
+                <h1 class="analysis-title">ما معنى تحليل <span id="title-name"></span>؟</h1>
+                <p class="analysis-subtitle" id="subtitle"></p>
+                
+                <div class="names-grid">
+                    <div class="name-box">
+                        <span class="label">الاسم الشائع</span>
+                        <span class="value" id="name-short"></span>
+                    </div>
+                    <div class="name-box">
+                        <span class="label">الاسم الفرنسي</span>
+                        <span class="value" id="name-fr"></span>
+                    </div>
+                    <div class="name-box">
+                        <span class="label">الاسم الإنجليزي</span>
+                        <span class="value" id="name-en"></span>
+                    </div>
+                    <div class="name-box" id="name-med-box" style="display: none;">
+                        <span class="label">الاسم الطبي</span>
+                        <span class="value" id="name-med"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-section">
+                <h2><i class="fa-solid fa-circle-question"></i> ما هو تحليل <span id="section-name"></span>؟</h2>
+                <p id="desc-what"></p>
+            </div>
+
+            <div class="analysis-section" id="measures-section">
+                <h2><i class="fa-solid fa-microscope"></i> ماذا يقيس التحليل؟</h2>
+                <p id="desc-measures"></p>
+            </div>
+
+            <div class="analysis-section">
+                <h2><i class="fa-solid fa-user-doctor"></i> لماذا قد يطلب الطبيب هذا التحليل؟</h2>
+                <p id="desc-why"></p>
+            </div>
+
+            <div class="analysis-section">
+                <h2><i class="fa-solid fa-utensils"></i> هل يحتاج التحليل إلى صيام؟</h2>
+                <p id="desc-fasting"></p>
+            </div>
+
+            <div id="dynamic-ranges-container"></div>
+
+            <div class="analysis-section">
+                <h2><i class="fa-solid fa-arrow-trend-up"></i> ماذا يعني ارتفاع النتيجة؟</h2>
+                <p id="desc-high"></p>
+            </div>
+
+            <div class="analysis-section">
+                <h2><i class="fa-solid fa-arrow-trend-down"></i> ماذا يعني انخفاض النتيجة؟</h2>
+                <p id="desc-low"></p>
+            </div>
+
+            <div class="analysis-section" id="when-care-section">
+                <h2><i class="fa-solid fa-bell"></i> متى يجب الانتباه إلى النتيجة؟</h2>
+                <p id="desc-when-care"></p>
+            </div>
+
+            <div id="dynamic-inaccurate-container"></div>
+            <div id="dynamic-comparison-container"></div>
+            <div id="dynamic-faq-container"></div>
+            <div id="dynamic-sources-container"></div>
+
+            <div class="alert-box">
+                <h3><i class="fa-solid fa-circle-exclamation"></i> تنبيه هام</h3>
+                <p><strong>مهم:</strong> المعلومات الموجودة هنا تثقيفية فقط ولا تُعد تشخيصًا طبيًا. القيم المرجعية قد تختلف من مختبر إلى آخر، ويجب تفسير النتيجة ضمن سياق الحالة الصحية كاملة.</p>
+            </div>
+
+            <div class="back-btn-container">
+                <a href="index.html" class="btn btn-outline"><i class="fa-solid fa-arrow-right"></i> العودة إلى جميع التحاليل</a>
+            </div>
+
+            <div class="section-header" style="margin-top: 5rem; margin-bottom: 2rem; text-align: right;">
+                <h2 style="font-size: 1.75rem;">تحاليل ذات صلة</h2>
+            </div>
+            
+            <div class="grid grid-3" id="related-cards-container" style="margin-bottom: 5rem;">
+                <!-- Related Cards generated by JS -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">
+                        <i class="fa-solid fa-microscope"></i>
+                        <span>ما معنى تحليلي؟</span>
+                    </a>
+                    <p>موقع تثقيفي يساعدك على فهم أسماء التحاليل الطبية ومصطلحاتها بشكل مبسط.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="diabetes.html">تحاليل السكري</a></li>
+                        <li><a href="files.html">الملفات</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>معلومات قانونية</h3>
+                    <ul>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="medical-disclaimer.html">إخلاء المسؤولية الطبية</a></li>
+                        <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                        <li><a href="terms.html">شروط الاستخدام</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="disclaimer-notice">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <p>المعلومات الموجودة في الموقع تثقيفية فقط ولا تغني عن استشارة الطبيب. يرجى مراجعة طبيبك لتشخيص حالتك بدقة.</p>
+                </div>
+                <p class="copyright">&copy; 2026 ما معنى تحليلي؟. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const slug = urlParams.get('slug');
+            
+            const notFoundEl = document.getElementById('not-found');
+            const contentEl = document.getElementById('analysis-content');
+            
+            if (!slug || typeof analysesData === 'undefined') {
+                notFoundEl.style.display = 'block';
+                return;
+            }
+            
+            const analysis = getAnalysisBySlug(slug);
+            
+            if (!analysis) {
+                notFoundEl.style.display = 'block';
+                return;
+            }
+            
+            // Render content
+            contentEl.style.display = 'block';
+            document.title = `ما معنى تحليل ${analysis.name}؟ | ما معنى تحليلي؟`;
+
+            // Dynamic meta description
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) {
+                metaDesc.setAttribute('content', `ما معنى تحليل ${analysis.name}؟ — ${analysis.arabicName}. ${analysis.description} شرح مبسط مع تفسير النتائج ولماذا يُطلب هذا التحليل.`);
+            }
+
+            // Dynamic canonical URL
+            const canonicalTag = document.getElementById('canonical-url');
+            if (canonicalTag) {
+                canonicalTag.setAttribute('href', `https://YOUR_DOMAIN/analysis.html?slug=${analysis.slug}`);
+            }
+            
+            document.getElementById('bc-name').textContent = analysis.name;
+            document.getElementById('title-name').textContent = analysis.name;
+            document.getElementById('subtitle').textContent = analysis.arabicName.split('—')[1]?.trim() || analysis.arabicName;
+            
+            document.getElementById('name-short').textContent = analysis.shortName;
+            document.getElementById('name-fr').textContent = analysis.frenchName;
+            document.getElementById('name-en').textContent = analysis.englishName;
+            
+            if (analysis.medicalName) {
+                document.getElementById('name-med').textContent = analysis.medicalName;
+                document.getElementById('name-med-box').style.display = 'flex';
+            }
+            
+            document.getElementById('section-name').textContent = analysis.name;
+            document.getElementById('desc-what').textContent = analysis.details.whatIsIt;
+            if (analysis.details.whatItMeasures) {
+                document.getElementById('desc-measures').textContent = analysis.details.whatItMeasures;
+            } else {
+                document.getElementById('measures-section').style.display = 'none';
+            }
+            document.getElementById('desc-why').innerHTML = analysis.details.whyRequested;
+            document.getElementById('desc-fasting').textContent = analysis.details.fastingRequired;
+            
+            document.getElementById('desc-high').textContent = analysis.details.highResult;
+            document.getElementById('desc-low').textContent = analysis.details.lowResult;
+            
+            // Advanced WhenToCare or fallback to default
+            const whenCareSection = document.getElementById('when-care-section');
+            if (analysis.details.whenToCareList) {
+                whenCareSection.className = 'highlight-box';
+                whenCareSection.innerHTML = `
+                    <h3><i class="fa-solid fa-bell"></i> ${analysis.details.whenToCareTitle || 'متى يجب الانتباه إلى النتيجة؟'}</h3>
+                    <ul>${analysis.details.whenToCareList.map(item => `<li>${item}</li>`).join('')}</ul>
+                    <p><strong>ملاحظة:</strong> ${analysis.details.whenToCareNote}</p>
+                `;
+            } else {
+                document.getElementById('desc-when-care').textContent = analysis.details.whenToCare;
+            }
+            
+            // Ranges
+            if (analysis.details.resultRanges) {
+                const r = analysis.details.resultRanges;
+                document.getElementById('dynamic-ranges-container').innerHTML = `
+                    <div class="analysis-section">
+                        <h2><i class="fa-solid fa-chart-pie"></i> ${r.title}</h2>
+                        <div class="ranges-grid">
+                            ${r.ranges.map(rg => `
+                                <div class="range-card ${rg.color}">
+                                    <h4>${rg.label}</h4>
+                                    <p>${rg.desc}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);"><i class="fa-solid fa-circle-info"></i> ${r.note}</p>
+                    </div>
+                `;
+            }
+            
+            // Inaccurate Factors
+            if (analysis.details.inaccurateFactors) {
+                const inf = analysis.details.inaccurateFactors;
+                document.getElementById('dynamic-inaccurate-container').innerHTML = `
+                    <div class="analysis-section">
+                        <h2><i class="fa-solid fa-triangle-exclamation"></i> ${inf.title}</h2>
+                        <p>${inf.desc}</p>
+                        <ul style="margin: 1.5rem 2rem; list-style: disc; font-size:1.1rem; line-height:1.8;">
+                            ${inf.factors.map(f => `<li>${f}</li>`).join('')}
+                        </ul>
+                        <p><strong>ملاحظة:</strong> ${inf.note}</p>
+                    </div>
+                `;
+            }
+            
+            // Comparison
+            if (analysis.details.comparison) {
+                const comp = analysis.details.comparison;
+                document.getElementById('dynamic-comparison-container').innerHTML = `
+                    <div class="analysis-section">
+                        <h2><i class="fa-solid fa-code-compare"></i> ${comp.title}</h2>
+                        <div class="comparison-table-wrapper">
+                            <table class="comparison-table">
+                                <tbody>
+                                    <tr>
+                                        <th>${comp.test1.name}</th>
+                                        <td>${comp.test1.desc}</td>
+                                    </tr>
+                                    <tr>
+                                        <th><a href="analysis.html?slug=${comp.test2.link}" style="color:var(--primary); text-decoration:underline;">${comp.test2.name}</a></th>
+                                        <td>${comp.test2.desc}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);"><i class="fa-solid fa-circle-info"></i> ${comp.note}</p>
+                    </div>
+                `;
+            }
+            
+            // Comparison Extra (second comparison table)
+            if (analysis.details.comparisonExtra) {
+                const comp2 = analysis.details.comparisonExtra;
+                document.getElementById('dynamic-comparison-container').innerHTML += `
+                    <div class="analysis-section">
+                        <h2><i class="fa-solid fa-code-compare"></i> ${comp2.title}</h2>
+                        <div class="comparison-table-wrapper">
+                            <table class="comparison-table">
+                                <tbody>
+                                    <tr>
+                                        <th>${comp2.test1.name}</th>
+                                        <td>${comp2.test1.desc}</td>
+                                    </tr>
+                                    <tr>
+                                        <th><a href="analysis.html?slug=${comp2.test2.link}" style="color:var(--primary); text-decoration:underline;">${comp2.test2.name}</a></th>
+                                        <td>${comp2.test2.desc}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);"><i class="fa-solid fa-circle-info"></i> ${comp2.note}</p>
+                    </div>
+                `;
+            }
+            
+            // FAQ
+            if (analysis.faq && analysis.faq.length > 0) {
+                document.getElementById('dynamic-faq-container').innerHTML = `
+                    <div class="analysis-section">
+                        <h2><i class="fa-solid fa-comments"></i> أسئلة شائعة</h2>
+                        ${analysis.faq.map((item) => `
+                            <div class="faq-item">
+                                <div class="faq-header" onclick="this.parentElement.classList.toggle('active')">
+                                    <span>${item.q}</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-content">
+                                    <p>${item.a}</p>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+            
+            // Sources
+            if (analysis.sources && analysis.sources.length > 0) {
+                document.getElementById('dynamic-sources-container').innerHTML = `
+                    <div class="analysis-section" style="background-color: var(--bg-light); border:none;">
+                        <h2><i class="fa-solid fa-book-medical"></i> المصادر الطبية</h2>
+                        <ul class="sources-list">
+                            ${analysis.sources.map(src => `<li><a href="${src.link}" target="_blank" rel="noopener noreferrer">${src.name}</a></li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+            
+            // Render related
+            const relatedContainer = document.getElementById('related-cards-container');
+            const related = getRelatedAnalyses(slug, 3);
+            if (related.length > 0) {
+                relatedContainer.innerHTML = related.map(generateCardHTML).join('');
+            } else {
+                document.querySelector('.section-header').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

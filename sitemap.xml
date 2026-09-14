@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- الصفحات الرئيسية -->
+  <url>
+    <loc>https://YOUR_DOMAIN/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://YOUR_DOMAIN/diabetes.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://YOUR_DOMAIN/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://YOUR_DOMAIN/files.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- صفحات تحاليل السكري -->
+  <url>
+    <loc>https://YOUR_DOMAIN/analysis.html?slug=hba1c</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://YOUR_DOMAIN/analysis.html?slug=glycemie-a-jeun</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://YOUR_DOMAIN/analysis.html?slug=glycemie</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://YOUR_DOMAIN/analysis.html?slug=glycemie-postprandiale</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- صفحات تحاليل الغدة الدرقية -->
+  <url>
+    <loc>https://YOUR_DOMAIN/analysis.html?slug=tsh</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://YOUR_DOMAIN/analysis.html?slug=ft4</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://YOUR_DOMAIN/analysis.html?slug=t4</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- صفحات تحاليل الكلى -->
+  <url>
+    <loc>https://YOUR_DOMAIN/analysis.html?slug=creatinine</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://YOUR_DOMAIN/analysis.html?slug=uree</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- صفحات تحاليل الكبد -->
+  <url>
+    <loc>https://YOUR_DOMAIN/analysis.html?slug=asat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://YOUR_DOMAIN/analysis.html?slug=alat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://YOUR_DOMAIN/analysis.html?slug=bilirubine</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- صفحات الدهون -->
+  <url>
+    <loc>https://YOUR_DOMAIN/analysis.html?slug=cholesterol-total</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

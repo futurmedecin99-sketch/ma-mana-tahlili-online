@@ -1,0 +1,13 @@
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Disallow utility/skeleton pages with no real content
+Disallow: /analyses.html
+Disallow: /contact.html
+Disallow: /terms.html
+Disallow: /privacy-policy.html
+Disallow: /medical-disclaimer.html
+
+# Sitemap location
+Sitemap: https://YOUR_DOMAIN/sitemap.xml
